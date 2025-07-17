@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import profile from '../data/profile';
 
 /**
  * Animated Hero section with name, typewriter roles, and animated entrance.
@@ -19,20 +20,14 @@ function Header({ onToggleDarkMode, darkMode }) {
         transition={{ duration: 0.8 }}
       >
         <img
-          src={process.env.PUBLIC_URL + '/profilePic.jpeg'}
-          alt="Sai Nishanth Vaka"
+          src={profile.photo}
+          alt={profile.name}
           className="profile-photo hero-photo"
         />
-        <h1 className="hero-title">Sai Nishanth Vaka</h1>
+        <h1 className="hero-title">{profile.name}</h1>
         <h2 className="hero-typewriter">
           <Typewriter
-            words={[
-              'Senior Software Engineer',
-              'Cloud Platform Specialist',
-              'Full Stack Developer',
-              'Tech Enthusiast',
-              'Open Source Contributor',
-            ]}
+            words={profile.typewriterRoles}
             loop={0}
             cursor
             cursorStyle="_"
@@ -42,14 +37,14 @@ function Header({ onToggleDarkMode, darkMode }) {
           />
         </h2>
         <div className="profile-contact-row">
-          <a href="mailto:sainishanthvaka373@gmail.com">sainishanthvaka373@gmail.com</a> |
-          <a href="https://linkedin.com/in/sainishanthvaka/" target="_blank" rel="noopener noreferrer"><FaLinkedin style={{ verticalAlign: 'middle' }} /> LinkedIn</a> |
-          <a href="https://github.com/sainishanthvaka" target="_blank" rel="noopener noreferrer"><FaGithub style={{ verticalAlign: 'middle' }} /> GitHub</a> |
-          San Diego, CA | +1 (623)-273-3630
+          <a href={`mailto:${profile.email}`}>{profile.email}</a> |
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin style={{ verticalAlign: 'middle' }} /> LinkedIn</a> |
+          <a href={profile.github} target="_blank" rel="noopener noreferrer"><FaGithub style={{ verticalAlign: 'middle' }} /> GitHub</a> |
+          {profile.location} | {profile.phone}
         </div>
         <div className="profile-header-actions">
           <a
-            href={process.env.PUBLIC_URL + '/SaiNishanthVakaResume.pdf'}
+            href={profile.resume}
             className="resume-download-btn"
             download
           >

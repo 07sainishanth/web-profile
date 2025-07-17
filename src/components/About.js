@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileSection from './ProfileSection';
+import about from '../data/about';
 
 /**
  * Professional summary section.
@@ -7,9 +8,7 @@ import ProfileSection from './ProfileSection';
 function About() {
   return (
     <ProfileSection title="Professional Summary" className="about">
-      <p>
-        Experienced backend software developer with 5+ years in building high-volume cloud platforms (up to 500K transactions/min) and SaaS solutions using Java, Spring Boot, Python, and AWS Services. Skilled in teamwork, cross-functional initiatives, communication, problem-solving, and critical thinking.
-      </p>
+      <p>{about.summary}</p>
     </ProfileSection>
   );
 }
