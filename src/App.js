@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Qualifications from './components/Qualifications';
-import Education from './components/Education';
-import Experience from './components/Experience';
+import ExperienceTimeline from './components/ExperienceTimeline';
 import Publications from './components/Publications';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
@@ -27,8 +26,7 @@ function App() {
       <Header onToggleDarkMode={handleToggleDarkMode} darkMode={darkMode} />
       <About />
       <Qualifications />
-      <Education />
-      <Experience />
+      <ExperienceTimeline />
       <Publications />
       <Projects />
       <Achievements />
