@@ -11,7 +11,7 @@ function Achievements() {
     <ProfileSection title="Achievements" className="achievements">
       <ul>
         {achievements.map((item, idx) => (
-          <li key={idx}>{item}</li>
+          <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
         ))}
       </ul>
     </ProfileSection>
