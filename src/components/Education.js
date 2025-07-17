@@ -1,9 +1,12 @@
 import React from 'react';
+import ProfileSection from './ProfileSection';
 
+/**
+ * Education section.
+ */
 function Education() {
   return (
-    <section className="profile-section education">
-      <h3>Education</h3>
+    <ProfileSection title="Education" className="education">
       <ul>
         <li>
           <strong>Arizona State University</strong>, Tempe, AZ<br />
@@ -18,7 +21,7 @@ function Education() {
           <em>Coursework:</em> Algorithm and Data Structure, Object-Oriented Programming, Database Management Systems, Computer Networking
         </li>
       </ul>
-    </section>
+    </ProfileSection>
   );
 }
 

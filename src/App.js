@@ -1,13 +1,13 @@
 import './App.css';
-import Header from './Header';
-import About from './About';
-import Qualifications from './Qualifications';
-import Education from './Education';
-import Experience from './Experience';
-import Publications from './Publications';
-import Projects from './Projects';
-import Achievements from './Achievements';
-import Contact from './Contact';
+import Header from './components/Header';
+import About from './components/About';
+import Qualifications from './components/Qualifications';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Publications from './components/Publications';
+import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Contact from './components/Contact';
 
 function App() {
   return (

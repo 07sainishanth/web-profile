@@ -1,9 +1,12 @@
 import React from 'react';
+import ProfileSection from './ProfileSection';
 
+/**
+ * Experience section.
+ */
 function Experience() {
   return (
-    <section className="profile-section experience">
-      <h3>Experience</h3>
+    <ProfileSection title="Experience" className="experience">
       <ul>
         <li>
           <strong>Senior Software Engineer</strong> at Intuit (AK Technologies), San Diego, CA<br />
@@ -50,7 +53,7 @@ function Experience() {
           </ul>
         </li>
       </ul>
-    </section>
+    </ProfileSection>
   );
 }
 

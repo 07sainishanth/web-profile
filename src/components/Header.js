@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Header section with name, title, and contact info.
+ */
 function Header() {
   return (
     <header className="profile-header">
@@ -10,7 +13,7 @@ function Header() {
       />
       <h1>Sai Nishanth Vaka</h1>
       <h2>Senior Software Engineer | Austin, TX</h2>
-      <div style={{marginTop: '0.5rem', fontSize: '1rem'}}>
+      <div className="profile-contact-row">
         <a href="mailto:sainishanthvaka373@gmail.com">sainishanthvaka373@gmail.com</a> | <a href="https://linkedin.com/in/sainishanthvaka/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | +1 (623)-273-3630
       </div>
     </header>
