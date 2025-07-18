@@ -1,7 +1,6 @@
 import React from 'react';
 import ProfileSection from './ProfileSection';
 import contact from '../data/contact';
-import PropTypes from 'prop-types';
 
 /**
  * Contact section.
@@ -17,7 +16,5 @@ function Contact() {
     </ProfileSection>
   );
 }
-
-Contact.propTypes = {};
 
 export default Contact; 

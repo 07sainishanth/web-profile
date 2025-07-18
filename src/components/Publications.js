@@ -1,7 +1,6 @@
 import React from 'react';
 import ProfileSection from './ProfileSection';
 import publications from '../data/publications';
-import PropTypes from 'prop-types';
 
 /**
  * Publications section.
@@ -19,7 +18,5 @@ function Publications() {
     </ProfileSection>
   );
 }
-
-Publications.propTypes = {};
 
 export default Publications; 

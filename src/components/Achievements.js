@@ -6,12 +6,27 @@ import achievements from '../data/achievements';
  * Achievements section.
  */
 function Achievements() {
+  const renderAchievement = (achievement) => {
+    // Check if the achievement contains a URL
+    const urlMatch = achievement.match(/\((https?:\/\/[^\s)]+)\)/);
+    if (urlMatch) {
+      const url = urlMatch[1];
+      const text = achievement.replace(/\(https?:\/\/[^\s)]+\)/, '').trim();
+      return (
+        <>
+          {text} (<a href={url} target="_blank" rel="noopener noreferrer">link</a>)
+        </>
+      );
+    }
+    return achievement;
+  };
+
   return (
     <ProfileSection title="Achievements" className="achievements">
       <ul>
-        {achievements.map((item, idx) => (
-          <li key={idx} style={{ backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center', padding: '1.5em', borderRadius: '1em', color: '#fff' }}>
-            <span dangerouslySetInnerHTML={{ __html: item.html }} />
+        {achievements.map((achievement, idx) => (
+          <li key={idx}>
+            {renderAchievement(achievement)}
           </li>
         ))}
       </ul>
