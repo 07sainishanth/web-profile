@@ -858,3 +858,142 @@ body, .App {
   border: 2.5px solid var(--color-primary);
   transform: scale(1.13);
 }
+
+/* Navigation Bar Styles */
+.navigation {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: var(--color-section-bg);
+  border-radius: 12px;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.nav-item:hover {
+  background: rgba(var(--color-primary-rgb, 13, 138, 188), 0.1);
+  transform: translateX(4px);
+}
+
+.nav-item.active {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 2px 8px rgba(var(--color-primary-rgb, 13, 138, 188), 0.3);
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.nav-label {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.nav-item.active .nav-label {
+  opacity: 1;
+}
+
+/* Responsive navigation */
+@media (max-width: 1200px) {
+  .navigation {
+    left: 10px;
+    padding: 0.75rem 0.25rem;
+  }
+  
+  .nav-item {
+    min-width: 120px;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+    min-width: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .navigation {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    flex-direction: row;
+    padding: 0.5rem;
+    border-radius: 25px;
+  }
+  
+  .nav-container {
+    flex-direction: row;
+    gap: 0.25rem;
+  }
+  
+  .nav-item {
+    min-width: auto;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
+  
+  .nav-label {
+    display: none;
+  }
+  
+  .nav-icon {
+    font-size: 1.2rem;
+    min-width: auto;
+  }
+  
+  .nav-item:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    bottom: 10px;
+    padding: 0.4rem;
+  }
+  
+  .nav-item {
+    width: 35px;
+    height: 35px;
+    padding: 0.4rem;
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+  }
+}
