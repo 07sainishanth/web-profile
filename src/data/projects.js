@@ -1,4 +1,13 @@
 const projects = [
+  // Example project with image
+  {
+    name: 'Sample Project',
+    description: 'A sample project using a techy photo.',
+    image: process.env.PUBLIC_URL + '/photos/rauno3.jpg',
+    tech: ['React', 'Node.js'],
+    github: '',
+    demo: '',
+  },
   {
     name: 'Smart Attendance System',
     description: 'Built a facial recognition-based attendance system using Python and OpenCV.',

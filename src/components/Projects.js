@@ -4,6 +4,8 @@ import projects from '../data/projects';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+const defaultImage = process.env.PUBLIC_URL + '/photos/rauno3.jpg';
+
 /**
  * Projects section with interactive cards.
  */
@@ -21,7 +23,7 @@ function Projects() {
             transition={{ duration: 0.5, delay: idx * 0.1 }}
           >
             <div className="project-image-wrapper">
-              <img src={project.image} alt={project.name} className="project-image" />
+              <img src={project.image || defaultImage} alt={project.name} className="project-image" />
             </div>
             <div className="project-content">
               <h4 className="project-title">{project.name}</h4>

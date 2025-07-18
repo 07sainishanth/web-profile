@@ -9,9 +9,11 @@ const experience = [
       'Reduced operational overhead by parallelising task execution and implementing multi-stage testing, enhancing collaboration and efficiency across cross-functional team dependencies.',
       'Improved application performance by consolidating multiple downstream calls into a single optimized service call, reducing latency by 200ms per transaction.',
       'Designed and implemented new APIs to externalize static data and dismantle legacy components, enabling a distributed system fully owned by the team and reducing repetitive development efforts by 20%.',
-      'Currently designing and implementing a decentralized architecture for TurboTax, enhancing scalability and reliability for 100K TPS during peak periods.'
+      'Currently designing and implementing a decentralized architecture for TurboTax, enhancing scalability and reliability for 100K TPS during peak periods.',
+      '<strong>Stack:</strong> Java, Spring Boot, JUnit, Mockito, React, JavaScript, TypeScript, Python, Jenkins',
     ],
-    icon: 'work'
+    icon: 'work',
+    image: process.env.PUBLIC_URL + '/photos/rauno1.jpg',
   },
   {
     type: 'work',

@@ -1,6 +1,6 @@
 const profile = {
   name: 'Sai Nishanth Vaka',
-  photo: process.env.PUBLIC_URL + '/profilePic.jpeg',
+  photo: process.env.PUBLIC_URL + '/photos/profilePic.jpeg',
   typewriterRoles: [
     'Senior Software Engineer',
     'Cloud Platform Specialist',

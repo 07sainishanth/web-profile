@@ -1,7 +1,6 @@
 import React from 'react';
 import ProfileSection from './ProfileSection';
 import achievements from '../data/achievements';
-import PropTypes from 'prop-types';
 
 /**
  * Achievements section.
@@ -11,13 +10,13 @@ function Achievements() {
     <ProfileSection title="Achievements" className="achievements">
       <ul>
         {achievements.map((item, idx) => (
-          <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+          <li key={idx} style={{ backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center', padding: '1.5em', borderRadius: '1em', color: '#fff' }}>
+            <span dangerouslySetInnerHTML={{ __html: item.html }} />
+          </li>
         ))}
       </ul>
     </ProfileSection>
   );
 }
-
-Achievements.propTypes = {};
 
 export default Achievements; 

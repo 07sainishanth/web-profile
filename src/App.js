@@ -29,6 +29,8 @@ function App() {
 
   return (
     <div className={`App${darkMode ? ' dark' : ''}`}>
+      {/* Techy Cat Logo Branding */}
+      <img src={process.env.PUBLIC_URL + '/icons/techy-cat.png'} alt="Techy Cat Logo" style={{ width: 48, height: 48, position: 'absolute', top: 16, left: 16, zIndex: 10 }} />
       <AccentColorPicker />
       <Header onToggleDarkMode={handleToggleDarkMode} darkMode={darkMode} />
       <About />
@@ -43,6 +45,10 @@ function App() {
       <NewsletterSignup />
       <Contact />
       <Chatbot />
+      <footer style={{ textAlign: 'center', marginTop: 40, padding: 24, background: 'rgba(0,0,0,0.05)' }}>
+        <img src={process.env.PUBLIC_URL + '/icons/techy-cat.png'} alt="Techy Cat Logo" style={{ width: 32, height: 32, verticalAlign: 'middle', marginRight: 8 }} />
+        <span style={{ verticalAlign: 'middle' }}>© {new Date().getFullYear()} Sai Nishanth Vaka</span>
+      </footer>
     </div>
   );
 }
